@@ -37,9 +37,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # мои приложения
     "accounts",
     "production",
     "service",
+    # установленные инструменты
+    'corsheaders',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +54,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # Дополнительно установленные
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = "silant.urls"
@@ -124,3 +130,8 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Дополнительные настройки
+CORS_ORIGIN_WHITELIST = [
+     'http://localhost:3000'
+]
