@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from silant.production.models import Model_tech, Model_dvig, Model_trasm, Model_vmost, Model_umost, Mashina
+from .models import Model_tech, Model_dvig, Model_trasm, Model_vmost, Model_umost, Mashina
 
 # Register your models here.
 admin.site.register(Model_tech)

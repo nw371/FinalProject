@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from silant.service.models import Vid_to, Otkaz, Vosstanovlenie, Servis, To
+from .models import Vid_to, Otkaz, Vosstanovlenie, Servis, To
 
 # Register your models here.
 admin.site.register(Vid_to)

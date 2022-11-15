@@ -4,6 +4,6 @@ from .serializers import MashinaSerializer
 from .models import Mashina
 # Create your views here
 
-class MashinaView(viewsets.ModelViewSet):
-    serializer_class = MashinaSerializer
+class MashinaViewSet(viewsets.ModelViewSet):
     queryset = Mashina.objects.all()
+    serializer_class = MashinaSerializer
